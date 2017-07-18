@@ -299,12 +299,19 @@
 <p>所有在constructor()方法中先将事件绑定</p>
 <p>this.timeHandler = this.timeHandler.bind(this)</p>
 <p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
-<p>父子级关系<br>    <app><br>        <sub><br>           <msg><br>        <sub2></sub2></msg></sub></app></p>
-<p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
+<p>父子级关系</p>
+<pre><code>##&lt;App /&gt;
+    ##&lt;Sub /&gt;
+       ##&lt;Msg /&gt;
+    ##&lt;Sub2 /&gt;
+</code></pre><p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
 <p>父级往子级去传值 使用props</p>
 <p>表单事件 点击事件 等等 所有的事件 都会为事件传进去一个proxy 代理对象</p>
-<p><commentbox><br>        <commentlist><br>                    <commentitem><br>        <commentform></commentform></commentitem></commentlist></commentbox></p>
-
+<p>##<commentbox></commentbox></p>
+<pre><code>##&lt;CommentList /&gt;
+            ##&lt;CommentItem&gt;
+##&lt;CommentForm /&gt;
+</code></pre>
       
     </div>
     <footer class="article-footer">
