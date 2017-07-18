@@ -227,11 +227,11 @@
   <div class="intro-navigate">
       <p class="navigater-list">
         
-          <a id="beautifont" class="main-nav-link" href="/">Startseite</a>
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
         
-          <a id="beautifont" class="main-nav-link" href="/archives">Archive</a>
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
         
-          <a id="beautifont" class="main-nav-link" href="/categories">Kategorien</a>
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
         
           <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
         
@@ -249,6 +249,72 @@
       <div id="content" class="outer">
         
           <section id="main" style="float:none;">
+  
+    <article id="post-React笔记(2)"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/07/18/React笔记(2)/">React笔记(2)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/07/18/React笔记(2)/" class="article-date">
+	  <time datetime="2017-07-18T02:39:49.000Z" itemprop="datePublished">2017-07-18</time>
+	</a>
+
+      
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>create-React-app是一个全局的命令行工具用来创建一个新的项目<br>react-scripts是一个生成的项目所需要的开发依赖</p>
+<p>一般我们开始创建反应网应用程序的时候，要自己通过npm或者纱安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码<br>现在如果你正在搭建反应运行环境，使用create-react-app去自动构建你的程序。你的项目所在的文件夹下是没有配置文件.react-scripts是唯一的额外的构造依赖在你的package.json中，你的运行环境将有每一个你需要用来构建一个现代应用程序应用程序你需要依赖，在配置文件中编写的配置代码，反应脚本都帮你写了，比如：react-scripts帮你自动下载需要的webpack-dev-server依赖，然后反应脚本自己写了一个nodejs服务端的脚本代码start.js来实例化WebpackDevServer，并且运行启动了一个使用express的Http服务器，现在你只需要专心写SRC源代码就可以了。省去了很多精力，最适合快速上手一个演示了。</p>
+<p>[React-scripts有以下支持，都帮你配置好了：<br>React，JSX，ES6和Flow语法支持。<br>ES6之外的语言扩展像对象扩展运算符。<br>直接从JavaScript导入CSS和图像文件。<br>自动翻页CSS，所以你不需要-webkit或其他前缀。<br>一个构建脚本来捆绑JS，CSS，和图像进行生产，具有源代码图。<br>一个发现常见错误的开发服务器。</p>
+<p>全局安装 create-react-app<br>npm install  create-react-app  -g</p>
+<p>生成react项目<br>create-react-app + &lt;目录名字&gt;</p>
+<p>cd +&lt;目录&gt;</p>
+<p>npm start 启动react项目</p>
+<p>学习react之前的一些前置的概念<br>一个核心思想——组件化<br>两位带头大哥——react &amp; react-dom<br>一个基本运作方式——数据驱动视图<br>一位神秘卧底——jsx语法<br>三位护法——state（状态）、props（属性）、refs（实例）<br>一群打杂小弟——生命周期</p>
+<p>ReactDOM.render() 有两个参数,  第一个参数必须是闭合标签,表示渲染的元素 第二个参数是渲染的位置</p>
+<p>jsx  不是网页上的标签,它是一个语法糖,也被称为虚拟dom<br>{} 插值很随意</p>
+<p>组件化概念<br>react与es6和babel有很大的关联 所谓组件 就是模块,也就是对象,每个组件都有它自己的状态(state)</p>
+<p>要想修改state 必须通过setState<br>构造函数是唯一能够初始化 this.state 的地方。</p>
+<p>使用组件化注意事项:建立文件的时候首字母要大写</p>
+<p>使用es module 导出模块 导入模块<br>export default class App extends React.Component{<br>    constructor(){<br>        super()<br>    }<br>}</p>
+<p>导入模块  后缀名 ./App.js 中.js可不写<br>import App from ‘./App’</p>
+<p>导入css文件 后缀名.css要写<br>import ‘./index.css’</p>
+<p>导入svg<br>import svg from ‘./logo.svg’</p>
+<p>注意:<br>事件的绑定,在react中必须保证this的指向永远的指向当前的组件对象</p>
+<p>所有在constructor()方法中先将事件绑定</p>
+<p>this.timeHandler = this.timeHandler.bind(this)</p>
+<p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
+<p>//父子级关系<br>|—–<app><br>        |—<sub><br>            |—<msg><br>        |—<sub2></sub2></msg></sub></app></p>
+<p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
+<p>父级往子级去传值 使用props</p>
+<p>表单事件 点击事件 等等 所有的事件 都会为事件传进去一个proxy 代理对象</p>
+<p>|—<commentbox><br>        |—-<commentlist><br>                    |—-<commentitem><br>        |—-<commentform></commentform></commentitem></commentlist></commentbox></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
   
     <article id="post-我的一个大型项目"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
@@ -291,7 +357,7 @@
 <!-- Table of Contents -->
 
   
-    <article id="post-React笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-React笔记(1)"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -299,7 +365,7 @@
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/18/React笔记/">React笔记</a>
+      <a class="article-title" href="/2017/07/18/React笔记(1)/">React笔记</a>
     </h1>
   
 
@@ -307,7 +373,7 @@
     
     <div class="article-meta">
       
-	<a href="/2017/07/18/React笔记/" class="article-date">
+	<a href="/2017/07/18/React笔记(1)/" class="article-date">
 	  <time datetime="2017-07-18T02:04:06.000Z" itemprop="datePublished">2017-07-18</time>
 	</a>
 
