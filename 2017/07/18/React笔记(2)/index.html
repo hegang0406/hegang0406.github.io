@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://hegang0406.github.io/2017/07/18/React笔记(2)/index.html">
 <meta property="og:site_name" content="我的第一个博客">
 <meta property="og:description" content="create-React-app是一个全局的命令行工具用来创建一个新的项目react-scripts是一个生成的项目所需要的开发依赖 一般我们开始创建反应网应用程序的时候，要自己通过npm或者纱安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码现在如果你正在搭建反应运行环境，使用create-react-app去自动构建你的程序。你的项目所">
-<meta property="og:updated_time" content="2017-07-18T02:51:08.702Z">
+<meta property="og:updated_time" content="2017-07-18T03:04:52.098Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React笔记(2)">
 <meta name="twitter:description" content="create-React-app是一个全局的命令行工具用来创建一个新的项目react-scripts是一个生成的项目所需要的开发依赖 一般我们开始创建反应网应用程序的时候，要自己通过npm或者纱安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码现在如果你正在搭建反应运行环境，使用create-react-app去自动构建你的程序。你的项目所">
@@ -208,19 +208,12 @@
 <p>所有在constructor()方法中先将事件绑定</p>
 <p>this.timeHandler = this.timeHandler.bind(this)</p>
 <p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
-<p>父子级关系</p>
-<pre><code>##&lt;App /&gt;
-    ##&lt;Sub /&gt;
-       ##&lt;Msg /&gt;
-    ##&lt;Sub2 /&gt;
-</code></pre><p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
+<p>父子级关系<br>    <code>&lt;App /&gt;</code><br>        <code>&lt;Sub /&gt;</code><br>           <code>&lt;Msg /&gt;</code><br>        <code>&lt;Sub2 /&gt;</code></p>
+<p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
 <p>父级往子级去传值 使用props</p>
 <p>表单事件 点击事件 等等 所有的事件 都会为事件传进去一个proxy 代理对象</p>
-<p>##<commentbox></commentbox></p>
-<pre><code>##&lt;CommentList /&gt;
-            ##&lt;CommentItem&gt;
-##&lt;CommentForm /&gt;
-</code></pre>
+<p><code>&lt;CommentBox /&gt;</code><br>        <code>&lt;CommentList /&gt;</code><br>                    <code>&lt;CommentItem&gt;</code><br>        <code>&lt;CommentForm /&gt;</code></p>
+
       
     </div>
     <footer class="article-footer">
@@ -456,7 +449,7 @@ var a = new Donate({
             我的第一个博客
           </div>
           <div class="panel-body">
-            Copyright © 2017 hegang All Rights Reserved.
+            Copyright © 2017 何罡 All Rights Reserved.
           </div>
         </div>
       </div>
