@@ -9,16 +9,16 @@
   
   
   
-  <meta name="description" content="一个非常好的博客">
+  <meta name="description" content="vue  作者尤雨溪  一门轻量级的js库 vue1.先引入vue.js 2.创建vue实例&amp;lt;div id=&amp;#39;root&amp;#39;&amp;gt;&amp;lt;/div&amp;gt; var app = new Vue({    el:’root’,    data:{ }, //凡是界面上有dom事件的都会放在这个methods里面 methods:{  } }) 3.指令系统v-if  条件渲染  v">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vue笔记">
 <meta property="og:url" content="https://hegang0406.github.io/2017/07/20/Vue笔记/index.html">
 <meta property="og:site_name" content="我的第一个博客">
-<meta property="og:description" content="一个非常好的博客">
-<meta property="og:updated_time" content="2017-07-20T03:07:17.120Z">
+<meta property="og:description" content="vue  作者尤雨溪  一门轻量级的js库 vue1.先引入vue.js 2.创建vue实例&amp;lt;div id=&amp;#39;root&amp;#39;&amp;gt;&amp;lt;/div&amp;gt; var app = new Vue({    el:’root’,    data:{ }, //凡是界面上有dom事件的都会放在这个methods里面 methods:{  } }) 3.指令系统v-if  条件渲染  v">
+<meta property="og:updated_time" content="2017-07-20T05:20:46.467Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vue笔记">
-<meta name="twitter:description" content="一个非常好的博客">
+<meta name="twitter:description" content="vue  作者尤雨溪  一门轻量级的js库 vue1.先引入vue.js 2.创建vue实例&amp;lt;div id=&amp;#39;root&amp;#39;&amp;gt;&amp;lt;/div&amp;gt; var app = new Vue({    el:’root’,    data:{ }, //凡是界面上有dom事件的都会放在这个methods里面 methods:{  } }) 3.指令系统v-if  条件渲染  v">
   
     <link rel="alternate" href="/atom.xml" title="我的第一个博客" type="application/atom+xml">
   
@@ -187,7 +187,27 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>vue  作者尤雨溪  一门轻量级的js库</p>
+<p>vue<br>1.先引入vue.js</p>
+<p>2.创建vue实例<br><code>&lt;div id=&#39;root&#39;&gt;&lt;/div&gt;</code></p>
+<p>var app = new Vue({<br>    el:’root’,<br>    data:{</p>
+<pre><code>},
+//凡是界面上有dom事件的都会放在这个methods里面
+methods:{
+
+}
+</code></pre><p>})</p>
+<p>3.指令系统<br>v-if  条件渲染  v-else-if  v-else</p>
+<p>v-on   绑定事件  只要你在js中你能想到的dom事件 vue都能绑定 dbclick  focus mouse move touch  play pause ended<br>在vue中  可以简写成@</p>
+<p>v-bind 只要你能想到的地方 它都能绑定  使用v-bind绑定 我们就可以使用app实例中data中定义的数据  computed</p>
+<p>在vue中 可以简写成:</p>
+<p>v-for  遍历数组<br>array = [123,234,345];<br>v-for = ‘ele in array’  v-if=”ele==’123’”  @click=’next(ele,index)’</p>
+<p>v-for = ‘(ele,index) in array’</p>
+<p>v-for = ‘value in obj’<br>v-for = ‘(value,key) in obj’</p>
+<p>v-html 来识别data属性中的标签字符串</p>
+<p>v-model  双向数据绑定</p>
+<p>模板字符串   里面一般情况下都会插字符串</p>
+
       
     </div>
     <footer class="article-footer">

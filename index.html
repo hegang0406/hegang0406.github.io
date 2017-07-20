@@ -278,7 +278,27 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>vue  作者尤雨溪  一门轻量级的js库</p>
+<p>vue<br>1.先引入vue.js</p>
+<p>2.创建vue实例<br><code>&lt;div id=&#39;root&#39;&gt;&lt;/div&gt;</code></p>
+<p>var app = new Vue({<br>    el:’root’,<br>    data:{</p>
+<pre><code>},
+//凡是界面上有dom事件的都会放在这个methods里面
+methods:{
+
+}
+</code></pre><p>})</p>
+<p>3.指令系统<br>v-if  条件渲染  v-else-if  v-else</p>
+<p>v-on   绑定事件  只要你在js中你能想到的dom事件 vue都能绑定 dbclick  focus mouse move touch  play pause ended<br>在vue中  可以简写成@</p>
+<p>v-bind 只要你能想到的地方 它都能绑定  使用v-bind绑定 我们就可以使用app实例中data中定义的数据  computed</p>
+<p>在vue中 可以简写成:</p>
+<p>v-for  遍历数组<br>array = [123,234,345];<br>v-for = ‘ele in array’  v-if=”ele==’123’”  @click=’next(ele,index)’</p>
+<p>v-for = ‘(ele,index) in array’</p>
+<p>v-for = ‘value in obj’<br>v-for = ‘(value,key) in obj’</p>
+<p>v-html 来识别data属性中的标签字符串</p>
+<p>v-model  双向数据绑定</p>
+<p>模板字符串   里面一般情况下都会插字符串</p>
+
       
     </div>
     <footer class="article-footer">
@@ -318,7 +338,58 @@
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
+<li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
+<li>我们要提高效率，就必须减少重复的工作</li>
+<li>使用less之类预处理的CSS</li>
+<li>提供开发阶段的便利，开发阶段更快捷</li>
+<li>现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上</li>
+<li>Gulp就是一种可以自动化完成我们开发过程中大量的重复工作<ul>
+<li>预处理语言的编译</li>
+<li>js css html 压缩混淆</li>
+<li>图片体积优化</li>
+</ul>
+</li>
+<li>除gulp之外还有一些类似的自动化工具，比如grunt</li>
+</ul>
+<p>1.gulp的使用</p>
+<p>1&gt;首先使用gulp 必须全局安装gulp<br>        npm install gulp -g<br>2&gt;测试自己电脑上已安装了gulp<br>    gulp —version<br>3&gt;在自己项目的根目录下 安装 开发者依赖<br>   npm install gulp —save-dev<br>4&gt;然后在根目录下创建一个名为gulpfile.js的文件</p>
+<p>gulpfile.js文件代码如下：<br>var gulp = require(‘gulp’);</p>
+<p>//默认任务 第一个参数是任务的名字，第二个参数是要执行的任务<br>gulp.task(‘default’,function(){<br>    console.log(‘我是一个默认任务’)<br>})</p>
+<p>此时在命令行中执行gulp  会默认的执行default任务</p>
+<p>// 自定义一个任务<br>gulp.task(‘hello’,function(){<br>    console.log(‘Hello world’)<br>})</p>
+<p>此时在命令行中执行gulp hello，会打印Hello world证明任务已执行</p>
+<p>gulp的作用在上面有介绍，有几个常用的插件：（去npm上搜索关键字寻找）<br>    •    编译 Jade: gulp-jade<br>    •    创建本地服务器：gulp-connect<br>    •    合并文件：gulp-concat<br>    •    最小化 js 文件：gulp-uglify<br>    •    重命名文件：gulp-rename<br>    •    最小化 css 文件：gulp-minify-css<br>    •    压缩html文件 gulp-minify-html<br>    •    最小化图像：gulp-imagemin</p>
+<p>自行练习上面插件的用法。</p>
+<p>2.bowser-sync的使用<br>仅仅的靠gulp的这点作用还不够，比如nodejs中有supervisor 只要后台代码发生改变，就能看到变化，那么前端就没有那种工具吗？答案是有的 ====》bowser-sync  它叫浏览器同步<br>官网：<a href="https://www.browsersync.io/" target="_blank" rel="external">https://www.browsersync.io/</a></p>
+<p>使用bowser-sync</p>
+<p>全局安装 npm install -g bowser-sync<br>在根目录下创建一个index.html文件<br>然后执行以下命令<br>browser-sync start –server –files “<em>.html”<br>后面”</em>.html” 是匹配文件的路径，使用正则表达式匹配</p>
+<p>然后将bowser-sync集成到gulp中去使用<br><a href="http://www.browsersync.cn/docs/gulp/#gulp-sass-css" target="_blank" rel="external">http://www.browsersync.cn/docs/gulp/#gulp-sass-css</a><br>用法：在之前的gulpfile.js文件中写入</p>
+<p>var browserSync = require(‘browser-sync’).create();</p>
+<p>var reload      = browserSync.reload;</p>
+<p>//先执行style任务 后执行serve任务<br>gulp.task(‘serve’, [‘style’], function() {</p>
+<pre><code>browserSync.init({
+    server: &quot;./&quot;
+});
+
+gulp.watch(&quot;./src/style/*.css&quot;, [&apos;style&apos;]);
+gulp.watch(&quot;./*.html&quot;).on(&apos;change&apos;, reload);
+</code></pre><p>});</p>
+<p>然后执行任务gulp task</p>
+<p>3.bower的使用<br> 后端有npm管理包工具,前端有bower管理包工具</p>
+<p> 老套路<br> npm install bower -g</p>
+<p>然后windows电脑 请使用cmd执行以下命令，不要使用gitbash了，会出问题（切记）</p>
+<p>bower init 初始化，会生成一个 bower.json的文件</p>
+<p>bower install bootstrap –save</p>
+<p>跟npm 用法类似</p>
+<p>上面讲述了 gulp(代码压缩，图片压缩，混淆等等)  bowser-sync（代码与浏览器同步）  bower（前端包管理工具），或许会有一种工具能将三种工具集成一起起作用。那就是yoman</p>
+<p><a href="http://yeoman.io/" target="_blank" rel="external">http://yeoman.io/</a></p>
+<p>yoman可以一键生成我们的前端的项目代码，集成了gulp bowser-sync bower三种工具的好处，好用之及。<br>要想使用yoman<br>npm install yo -g</p>
+<p>//安装一个全局的发电机 注意是一个  generator有很多个，可以去官网上查找<br>npm install -g generator-webapp</p>
+<p>然后windows电脑用户注意了，以下命令请在cmd中使用</p>
+<p>执行 yo<br>上下键选择webapp<br>空格键去掉不想使用的库<br>然后启动gulp serve来查看一下当前生成的项目，修改一下里面的代码，保存，看一下bowser-sync的作用<br>然后执行gulp   会执行default任务，查看一下当前目录会生成一个dist<br>文件夹，里面就是被处理之后的项目代码。</p>
+<p>内容比较多，东西也比较杂，不要求一定很熟练，但基本的操作一定要会。面试官可能会聊点这些工具的使用，可以简单说了123条就ok了。另外，看文档是每个程序员必备的一种能力，大家一定要克服这种不喜欢读文字不思考的习惯。</p>
+
       
     </div>
     <footer class="article-footer">
