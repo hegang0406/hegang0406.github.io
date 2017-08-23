@@ -3,21 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的第一个博客</title>
+  <title>前端基础知识 | 我的第一个博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="一个非常好的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="我的第一个博客">
-<meta property="og:url" content="https://hegang0406.github.io/index.html">
+  <meta name="description" content="行内元素和块元素的特征?块级元素:     独占一行     宽度默认100%     可以设置宽高及内外边距     可以包裹行内元素或块元素     可以设置四个方向的内外边距     标签内只有文本时(区别于标签套标签),设置行高会影响背景范围     可以嵌套所有标签,&amp;lt;p&amp;gt;只能嵌套行内,嵌套块元素会被浏览器以其他方式解析;&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;标签不能互相">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端基础知识">
+<meta property="og:url" content="https://hegang0406.github.io/2017/08/23/前端基础知识/index.html">
 <meta property="og:site_name" content="我的第一个博客">
-<meta property="og:description" content="一个非常好的博客">
+<meta property="og:description" content="行内元素和块元素的特征?块级元素:     独占一行     宽度默认100%     可以设置宽高及内外边距     可以包裹行内元素或块元素     可以设置四个方向的内外边距     标签内只有文本时(区别于标签套标签),设置行高会影响背景范围     可以嵌套所有标签,&amp;lt;p&amp;gt;只能嵌套行内,嵌套块元素会被浏览器以其他方式解析;&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;标签不能互相">
+<meta property="og:updated_time" content="2017-08-23T08:06:30.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一个博客">
-<meta name="twitter:description" content="一个非常好的博客">
+<meta name="twitter:title" content="前端基础知识">
+<meta name="twitter:description" content="行内元素和块元素的特征?块级元素:     独占一行     宽度默认100%     可以设置宽高及内外边距     可以包裹行内元素或块元素     可以设置四个方向的内外边距     标签内只有文本时(区别于标签套标签),设置行高会影响背景范围     可以嵌套所有标签,&amp;lt;p&amp;gt;只能嵌套行内,嵌套块元素会被浏览器以其他方式解析;&amp;lt;h1&amp;gt;-&amp;lt;h6&amp;gt;标签不能互相">
   
     <link rel="alternate" href="/atom.xml" title="我的第一个博客" type="application/atom+xml">
   
@@ -46,9 +47,11 @@
   <link rel="stylesheet" href="/css/bootstrap.css" >
 
   
-    <link rel="stylesheet" href="/css/home.css" >
+    <link rel="stylesheet" href="/css/dialog.css">
   
 
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
   
 
   
@@ -61,207 +64,107 @@
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
-  
-    <header id="header">
-
-    
-      <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
-
-      <!-- Support rolling -->  
-        
-        <section class="awSlider">
-          <div class="carousel slide carousel-fade " data-ride="carousel">
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-               
-                  
-                    <div class="item active">
-                  
-                    <img id="carousel-img0" src="/css/images/home-bg.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img0 = new Image();
-                      var imageTag0 = document.getElementById("carousel-img0");
-                      img0.src = imageTag0.src;
-                      img0.onload=function(){
-                        if (img0.width / img0.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag0.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag0.style.height = document.body.clientHeight + "px";
-                          imageTag0.style.marginLeft = -(document.body.clientHeight * img0.width / img0.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img1" src="/css/images/sample.jpg">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img1 = new Image();
-                      var imageTag1 = document.getElementById("carousel-img1");
-                      img1.src = imageTag1.src;
-                      img1.onload=function(){
-                        if (img1.width / img1.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag1.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag1.style.height = document.body.clientHeight + "px";
-                          imageTag1.style.marginLeft = -(document.body.clientHeight * img1.width / img1.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-                  
-                    <div class="item">
-                  
-                    <img id="carousel-img2" src="https://source.unsplash.com/collection/954550/1920x1080">
-                  </div>
-
-                  <!-- 自适应大图 -->
-                  <script>
-                      var img2 = new Image();
-                      var imageTag2 = document.getElementById("carousel-img2");
-                      img2.src = imageTag2.src;
-                      img2.onload=function(){
-                        if (img2.width / img2.height <= document.body.clientWidth / document.body.clientHeight) {
-                          imageTag2.style.width = document.body.clientWidth + "px";
-                        } else {
-                          imageTag2.style.height = document.body.clientHeight + "px";
-                          imageTag2.style.marginLeft = -(document.body.clientHeight * img2.width / img2.height - document.body.clientWidth) / 2 + "px";
-                        }
-                      };
-                  </script>
-                
-            </div>
-
-            <!-- Controls -->
-            <a class="left carousel-control" href=".carousel" role="button" data-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Geri</span>
-            </a>
-            <a class="right carousel-control" href=".carousel" role="button" data-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">İleri</span>
-            </a>
-          </div>
-        </section>
-        <script>
-          $('section.awSlider .carousel').carousel({
-              pause: '',
-              interval: 5000
-          });
-          var startImage = $('section.awSlider .item.active > img').attr('src');
-          $('section.awSlider .carousel').on('slid.bs.carousel', function () {
-              var bscn = $(this).find('.item.active > img').attr('src');
-              $('section.awSlider > img').attr('src', bscn);
-          });
-        </script>
-      
-
-    
- 
-
-
-    <canvas width="100%" height="100%"></canvas>
-    <script>
-      var c = document.getElementsByTagName('canvas')[0],
-          x = c.getContext('2d'),
-          w = window.innerWidth,
-          h = window.innerHeight,
-          pr = window.devicePixelRatio || 1,
-          f = 90,
-          q,
-          m = Math,
-          r = 0,
-          u = m.PI*2,
-          v = m.cos,
-          z = m.random
-      c.width = w*pr
-      c.height = h*pr
-      x.scale(pr, pr)
-      x.globalAlpha = 0.6
-
-      
-    </script>
-    
-
-    
-      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
-    
-
-        
-          <div class="homelogoback"  style="border: 1px solid #404040;" >
-            <h1><a href="#content" id="logo">我的第一个博客</a></h1>
-            <h3>一个非常好的博客</h3>
-            <h5>何罡</h5>
-            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
-          </div>
-        
-    
-    </div>
-  </div>
-
-  <!-- 自适应主页背景大图 -->
-  
-
- <!-- home_logo_image居中 -->
- 
-    <script>
-        var homelogodiv = document.getElementById("homelogo");
-        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
-          homelogodiv.style.width = document.body.clientWidth + "px";
-          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
-        } else {
-          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
-          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
-        }
-    </script>
-  
-
-  <div class="intro-navigate">
-      <p class="navigater-list">
-        
-          <a id="beautifont" class="main-nav-link" href="/">Startseite</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/archives">Archive</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/categories">Kategorien</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
-        
-          <a id="beautifont" class="main-nav-link" href="/about">About</a>
-        
-      </p>
-  </div>
-
-</header>
   
   <div id="container">
     <div id="wrap">
       
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/mylogo.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Startseite</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archive</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Kategorien</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Schreib etwas..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Beiträge',
+            PAGES: 'Seiten',
+            CATEGORIES: 'Kategorien',
+            TAGS: 'Tags',
+            UNTITLED: '(Unbenannt)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-    <article id="post-前端基础知识"  class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-前端基础知识" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
       <header class="article-header">
         
   
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/08/23/前端基础知识/">前端基础知识</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      前端基础知识
     </h1>
   
 
@@ -275,6 +178,12 @@
 
       
       
+	<a class="article-views">
+	<span id="busuanzi_container_page_pv">
+		PV:<span id="busuanzi_value_page_pv"></span>
+	</span>
+	</a>
+
     </div>
     <div class="article-entry" itemprop="articleBody">
       
@@ -1016,492 +925,76 @@ CSS float:
     </div>
     <footer class="article-footer">
       
-      
-      
-    </footer>
-  </div>
-  
-</article>
+        <div id="donation_div"></div>
 
-<!-- Table of Contents -->
-
-  
-    <article id="post-前端开发工程师的职业规划"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/23/前端开发工程师的职业规划/">前端开发工程师的职业规划</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/23/前端开发工程师的职业规划/" class="article-date">
-	  <time datetime="2017-07-23T07:50:28.000Z" itemprop="datePublished">2017-07-23</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对于一个WEB前端的职业规划，其实是有各种的答案，没有哪种答案是完全正确的，全凭自己的选择，只要是自己选定了，坚持去认真走，就好。在这里， 我只是 简要说一下自己对于这块儿内容的理解。有一个观点想要分享给大家的是：任何规划和目标的实现都依赖于知识的积累，而知识的积累来源于学习及学习后大量的实 践。我提供一个实践途径，我们可以在工作之余的时间在网上或外包公司那里接一些私单做，因为目标不是赚钱，我们可以用最低的价格来提升自身竞争力，获得大 量订单就意味着获得大量的实践机会，同时，还有一些收入作为工作成就感之外的安慰奖，还是不错的。<br>一、职业方向定位</p>
-<pre><code>    首先，只有确定好自己的职业方向，才能做好职业规划。在我看来，做WEB前端技术能够找到的职业方向有以下几种：
-
-    （1）资深WEB前端工程师
-
-             这个方向算是一个WEB前端最基本的选择了，在国外，很多老外都能够把自己的专业做到极致，能一辈子就在一个专业领域不断学习和积累。主要在于内因和外因 两方面，内因是老外通常思想比较简单直接，容易一直专注于一个领域；外因是国外的环境很好，能够良好的支撑这样的职业发展道路。反观国内，从内因来 讲，WEB前端技术人员还是蛮浮躁的，通常会因为WEB前端知识的更新速度太快而觉得学习起来辛苦，最终转向后台或其他道路。从外因来讲，WEB前端人员 没有获得公平的待遇，可能从HTML页面制作就开始并沿袭下来的，从来WEB前端人员都比后端人员低一等，貌似前端就是“浅显”的代名词、后端就是“深 奥”的代名词，这也直接造就了前端人员的收入无法和后端人员媲美，同时直接影响到前端人才市场的活跃程度。另一方面，前端的技术入门较容易，造成另一个极 端情况：人员泛滥、人才稀缺。我想对所有的WEB前端工程师说：面包总会有的，要耐得住寂寞！我个人比较推荐这个职业发展方向，因为，在这个方向下，只要 足够耐心、厚积薄发，成功的概率是非常高的。同时，这是一条最单纯的路，我们更多的是花费精力在技术的钻研上，而不是办公室政治等其它琐事。
-
-   （2）资深WEB架构师
-
-      说功利点儿，我喜欢这个方向，既兼顾了工作的单纯性、又能够减少实际Coding的工作量能腾出更多时间钻研技术。在国内，WEB前端工程师遇到较多的情 况是总是反复编写着同样的代码，总是面对着同样的技术和产品，容易感觉枯燥。由于我们拥有最为广泛的WEB相关知识沉淀，使得我们更加容易成为一名架构 师。这个职业发展方向不如第一种来得平滑，主要是作为一名架构师不得不学习：后端技术、DBA、Platform等内容，而这种学习通常需要实际操刀做项 目，不是自己在家里写两个Demo就好的，这就势必会遭遇一段时间的阵痛期。虽然不是很平滑，但是，对于一个大局观好、悟性好、知识面广的前端工程师，我 推荐你们努把力，走一条光荣的架构师之路吧。
-
-   （3）自己创业
-
-    其实，自己创业是最好的道路、也是成功率最低的道路，挑战和机遇并存。这里，作为一个前端技术人员，需要将自己的视野更多放在行业的动态、产业链的动态、 相关产品领域的动态，把关注细节的优势继续保持，同时，增强自己把控一个产品乃至一个公司命运的能力。但是，这条道路和技术之路稍有分歧，后续将不再赘 述。
-
-二、职业发展目标
-
-     我都有一个最终的目标，在这个目标之上，我们需要给自己制定一系列学习和成长计划，制定的方法如下：
-
-     第一、梳理知识架构；
-
-      梳理知识架构的目的在于，我们要了解清楚，哪些技术是前置、哪些技术是后继，那些技术是深度、哪些技术是广度，按照这两个维度梳理好知识架构之后，我们才能准确地制定清晰的成长目标、高效的成长计划。
-
-     第二、分解目标；
-
-      我认为，大抵可分解为三个阶段，包括：起步阶段、提升阶段、成型阶段。这三个阶段分别对应着不同的目标：
-
-     起步阶段：
-
-     1、基本知识的掌握
-
-      在我们梳理的知识架构中，按照我们分析的两个维度里最前置的、最浅显的部分，作为打基础的阶段，必须要在这个过程中更多投入到实践中去，我们通常做的多了、熟练了，就认为这部分知识和内容掌握了。
-
-      2、常用工具的掌握
-
-       对于常用工具的掌握应该掌握一些有大公司或专业团队背景的流行工具，这些工具的熟练掌握能够提升专业度、职业度，同时，能提升我们的工作效率。我们只有在 检验自己对于知识和技能熟练程度的时候，才会自虐式的用Notepad去编写页面、css和脚本等内容。
-
-      3、沟通技巧的掌握
-
-       通常做技术的人会被定位为“不善沟通”的人，这是为什么呢？究其原因，主要是因为多跟程序和代码打交道，跟人的沟通较少导致。这种时候我们要特别注意增加 和人沟通的机会，着重提升这块儿的能力。另一方面，我们通常被称为“不懂沟通技巧”的人。在国内，我们的技术人员通常都是自己制定方案、自己执行方案，在 执行过程中又缺乏相关产品、交互设计等人员的沟通，大多是在自己的思路贯彻下进行开 发，久而久之，我们习惯于信任自己的观点、在自己的视角看问题，对于挑战总是百般地“据理”力争。我们需要更多提升的是，如何在对方的视角看问题、如何在 用户的视角看问题。
-
-      4、良好的开发习惯
-
-      开发习惯是养成的，一旦有不好的习惯，对于将来去修正带来的将是很大的麻烦，我们在培养良好开发习惯一定要从起步时做起，例如：写代码之前先分析、先写文 档、先写注释。定义变量最好能用直接可理解的语义，最好是拼音，别整英文，尤其是生僻单词，将来自己忘了还要开金山词霸。文件最好有有意义的文件夹命名来 管理，文件名最好有意义，需要版本号的最好能和项目版本号一同更新……等等。
-
-      提升阶段：
-
-     1、高级技术的掌握
-
-      在提升阶段对于知识和技能掌握，我们需要从梳理好的知识架构中选择更深一层次的技术进行学习，选择之前，我们先通过类比或预估的方法，衡量自身学习的难 点，以学习难点和自己最不感兴趣的部分为主。这样推荐大家的原因是：这个阶段我们兴趣正浓，已经度过了苦涩的起步阶段，到达了兴奋的提升阶段，我们要用兴 趣和兴奋去挑战最困难的部分，在我们信心受挫和兴趣浓厚之中找到平衡。同时，辅以其他的深层次知识一起学习和研究。
-
-      2、产品思想的学习
-
-       没有正确的产品思想，很难设计出良好的程序，无论从界面、交互，还是接口、逻辑，不能够理解产品、理解用户需求，我们会给自己造成很大的麻烦，例如：我们 千辛万苦用最新技术、最复杂的实现做出的功能，却得不到使用者或领导、同事的认可。为了使我们的工作和学习更加有效率、避免无用功，我们需要不断的学习产 品的思想，只有理解了产品的思路，我们才知道用我们的技术去输出什么。
-
-      3、各种框架的学习
-
-       框架是我们提高工作效率的优秀手段，对于框架的学习是成长必经之路。我们学习框架的路线通常应该是：使用——》分析——》个性化定制——》模仿编写自己的 框架。只有大量的使用，才能明白设计框架者在设计背后的思路，只有了解到设计的思路，才能做正确全面的分析，只有正确全面的分析才能支撑我们去对其裁剪或 扩展，只有经过实际分析、修改别人的框架，才有可能写出优秀的、自己的框架。学习通常的路线是：学习、理解、模仿、创造。
-
-       4、富客户端应用的学习
-
-      随着带宽和计算机性能的提升，以及WEB2.0的如火如荼，富客户端应用充斥着互联网，如果你不懂得富客户端应用，你就不能称之为一个合格的前端技术人 员。可以按照：Flash动画——》Flash编程——》 Flex——》——》Air——》Silverlight动画——》Silverlight编程 的步骤学习，先学Flash后学Siverlight的原因，一来Silverlight还不太成熟，二来，实际Silverlight借鉴了很多 Flash的思想，最好在学习的时候不要本末倒置。
-
-      5、各种网络协议的学习
-
-      WEB前端技术就是云上的技术，云的协议有N种，我们应该着重学习：TCP/IP，UDP，HTTP，POP3，SMTP这几种协议，在开发WEB前端应 用过程中，这些协议是我们的技术的载体，有时候决定了我们的应用是否能实现、有时候决定了我们的应用是否高性能，同时，这些协议还是我们和后端技术交互的 重要手段，这些协议就像是密码字典，帮助我们把后端传输过来的密文解释成我们前端技术能够理解的明文。
-
-      6、程序设计
-
-      这个阶段我们需要学习OO、UML、设计模式、设计方法……，我们要让技术开发工作变成有目的性、有计划性，并且，这些目的和计划必须有理论的支持，这 样，我们设计出来的程序才能够更优秀、我们的开发才更有效率，这样，我们的技术才能有所提升。为什么要学习程序设计呢？主要是，就算我们不用Flash的 ActionScript编写程序的前端逻辑，我们至少要把我们自己的Javascript函数、包的定义规划起来，避免将来自己或他人维护代码的时候出 现问题。程序设计能力，在技术人员仍然被看作是程序员的这个年代，是灰常、灰常重要滴。
-
-       成型阶段：
-
-       到了这个阶段，我也没什么好说的了，如果能达到这个阶段，就证明后续的成长之路是异彩纷呈的，是成为一个资深WEB前端工程师，还是成为一个资深WEB架 构师，亦或其他，都要具体分析自身的特点和兴趣所在。如果是资深的前端工程师，我觉得更重要的是去作新技术的研究，互联网技术发展速度日新月异，不断学习 新技术，否则就被淘汰。此外，我建议在知识的广度、深度方面最好能挑选一个自己最擅长和最感兴趣的一两个领域深入钻研，不要挑太多，多而不精。
-</code></pre><p>经验可以积累，但梦想永远不能磨灭</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-Vue笔记"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/20/Vue笔记/">Vue笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/20/Vue笔记/" class="article-date">
-	  <time datetime="2017-07-20T03:07:17.000Z" itemprop="datePublished">2017-07-20</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>vue  作者尤雨溪  一门轻量级的js库</p>
-<p>vue<br>1.先引入vue.js</p>
-<p>2.创建vue实例<br><code>&lt;div id=&#39;root&#39;&gt;&lt;/div&gt;</code></p>
-<p>var app = new Vue({<br>    el:’root’,<br>    data:{</p>
-<pre><code>},
-//凡是界面上有dom事件的都会放在这个methods里面
-methods:{
-
-}
-</code></pre><p>})</p>
-<p>3.指令系统<br>v-if  条件渲染  v-else-if  v-else</p>
-<p>v-on   绑定事件  只要你在js中你能想到的dom事件 vue都能绑定 dbclick  focus mouse move touch  play pause ended<br>在vue中  可以简写成@</p>
-<p>v-bind 只要你能想到的地方 它都能绑定  使用v-bind绑定 我们就可以使用app实例中data中定义的数据  computed</p>
-<p>在vue中 可以简写成:</p>
-<p>v-for  遍历数组<br>array = [123,234,345];<br>v-for = ‘ele in array’  v-if=”ele==’123’”  @click=’next(ele,index)’</p>
-<p>v-for = ‘(ele,index) in array’</p>
-<p>v-for = ‘value in obj’<br>v-for = ‘(value,key) in obj’</p>
-<p>v-html 来识别data属性中的标签字符串</p>
-<p>v-model  双向数据绑定</p>
-<p>模板字符串   /{}/里面一般情况下都会插字符串</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-前端工具的使用"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/20/前端工具的使用/">前端工具的使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/20/前端工具的使用/" class="article-date">
-	  <time datetime="2017-07-20T03:07:06.000Z" itemprop="datePublished">2017-07-20</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="当下的前端开发"><a href="#当下的前端开发" class="headerlink" title="当下的前端开发"></a>当下的前端开发</h2><ul>
-<li>不再是简简单单的使用HTML+CSS+JavaScript这些简单的技术构建网页应用程序了</li>
-<li>我们要提高效率，就必须减少重复的工作</li>
-<li>使用less之类预处理的CSS</li>
-<li>提供开发阶段的便利，开发阶段更快捷</li>
-<li>现在的开发行业优质的开发人员是不应该将精力放在这些重复性质的工作上</li>
-<li>Gulp就是一种可以自动化完成我们开发过程中大量的重复工作<ul>
-<li>预处理语言的编译</li>
-<li>js css html 压缩混淆</li>
-<li>图片体积优化</li>
-</ul>
-</li>
-<li>除gulp之外还有一些类似的自动化工具，比如grunt</li>
-</ul>
-<p>1.gulp的使用</p>
-<p>1&gt;首先使用gulp 必须全局安装gulp<br>        npm install gulp -g<br>2&gt;测试自己电脑上已安装了gulp<br>    gulp —version<br>3&gt;在自己项目的根目录下 安装 开发者依赖<br>   npm install gulp —save-dev<br>4&gt;然后在根目录下创建一个名为gulpfile.js的文件</p>
-<p>gulpfile.js文件代码如下：<br>var gulp = require(‘gulp’);</p>
-<p>//默认任务 第一个参数是任务的名字，第二个参数是要执行的任务<br>gulp.task(‘default’,function(){<br>    console.log(‘我是一个默认任务’)<br>})</p>
-<p>此时在命令行中执行gulp  会默认的执行default任务</p>
-<p>// 自定义一个任务<br>gulp.task(‘hello’,function(){<br>    console.log(‘Hello world’)<br>})</p>
-<p>此时在命令行中执行gulp hello，会打印Hello world证明任务已执行</p>
-<p>gulp的作用在上面有介绍，有几个常用的插件：（去npm上搜索关键字寻找）<br>    •    编译 Jade: gulp-jade<br>    •    创建本地服务器：gulp-connect<br>    •    合并文件：gulp-concat<br>    •    最小化 js 文件：gulp-uglify<br>    •    重命名文件：gulp-rename<br>    •    最小化 css 文件：gulp-minify-css<br>    •    压缩html文件 gulp-minify-html<br>    •    最小化图像：gulp-imagemin</p>
-<p>自行练习上面插件的用法。</p>
-<p>2.bowser-sync的使用<br>仅仅的靠gulp的这点作用还不够，比如nodejs中有supervisor 只要后台代码发生改变，就能看到变化，那么前端就没有那种工具吗？答案是有的 ====》bowser-sync  它叫浏览器同步<br>官网：<a href="https://www.browsersync.io/" target="_blank" rel="external">https://www.browsersync.io/</a></p>
-<p>使用bowser-sync</p>
-<p>全局安装 npm install -g bowser-sync<br>在根目录下创建一个index.html文件<br>然后执行以下命令<br>browser-sync start –server –files “<em>.html”<br>后面”</em>.html” 是匹配文件的路径，使用正则表达式匹配</p>
-<p>然后将bowser-sync集成到gulp中去使用<br><a href="http://www.browsersync.cn/docs/gulp/#gulp-sass-css" target="_blank" rel="external">http://www.browsersync.cn/docs/gulp/#gulp-sass-css</a><br>用法：在之前的gulpfile.js文件中写入</p>
-<p>var browserSync = require(‘browser-sync’).create();</p>
-<p>var reload      = browserSync.reload;</p>
-<p>//先执行style任务 后执行serve任务<br>gulp.task(‘serve’, [‘style’], function() {</p>
-<pre><code>browserSync.init({
-    server: &quot;./&quot;
+<script src="/js/vdonate.js"></script>
+<script>
+var a = new Donate({
+  title: '如果觉得我的文章对您有用，请随意打赏。您的支持将鼓励我继续创作!', // 可选参数，打赏标题
+  btnText: 'Donate', // 可选参数，打赏按钮文字
+  el: document.getElementById('donation_div'),
+  wechatImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/WeChanQR.png',
+  alipayImage: 'https://raw.githubusercontent.com/iTimeTraveler/iTimeTraveler.github.io/site/source/about/donate/images/AliPayQR.jpg'
 });
-
-gulp.watch(&quot;./src/style/*.css&quot;, [&apos;style&apos;]);
-gulp.watch(&quot;./*.html&quot;).on(&apos;change&apos;, reload);
-</code></pre><p>});</p>
-<p>然后执行任务gulp task</p>
-<p>3.bower的使用<br> 后端有npm管理包工具,前端有bower管理包工具</p>
-<p> 老套路<br> npm install bower -g</p>
-<p>然后windows电脑 请使用cmd执行以下命令，不要使用gitbash了，会出问题（切记）</p>
-<p>bower init 初始化，会生成一个 bower.json的文件</p>
-<p>bower install bootstrap –save</p>
-<p>跟npm 用法类似</p>
-<p>上面讲述了 gulp(代码压缩，图片压缩，混淆等等)  bowser-sync（代码与浏览器同步）  bower（前端包管理工具），或许会有一种工具能将三种工具集成一起起作用。那就是yoman</p>
-<p><a href="http://yeoman.io/" target="_blank" rel="external">http://yeoman.io/</a></p>
-<p>yoman可以一键生成我们的前端的项目代码，集成了gulp bowser-sync bower三种工具的好处，好用之及。<br>要想使用yoman<br>npm install yo -g</p>
-<p>//安装一个全局的发电机 注意是一个  generator有很多个，可以去官网上查找<br>npm install -g generator-webapp</p>
-<p>然后windows电脑用户注意了，以下命令请在cmd中使用</p>
-<p>执行 yo<br>上下键选择webapp<br>空格键去掉不想使用的库<br>然后启动gulp serve来查看一下当前生成的项目，修改一下里面的代码，保存，看一下bowser-sync的作用<br>然后执行gulp   会执行default任务，查看一下当前目录会生成一个dist<br>文件夹，里面就是被处理之后的项目代码。</p>
-<p>内容比较多，东西也比较杂，不要求一定很熟练，但基本的操作一定要会。面试官可能会聊点这些工具的使用，可以简单说了123条就ok了。另外，看文档是每个程序员必备的一种能力，大家一定要克服这种不喜欢读文字不思考的习惯。</p>
-
-      
-    </div>
-    <footer class="article-footer">
+</script>
       
       
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-React笔记(2)"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
         
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/18/React笔记(2)/">React笔记(2)</a>
-    </h1>
-  
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/18/React笔记(2)/" class="article-date">
-	  <time datetime="2017-07-18T02:39:49.000Z" itemprop="datePublished">2017-07-18</time>
-	</a>
+		       if (typeof LivereTower === 'function') { return; }
 
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>create-React-app是一个全局的命令行工具用来创建一个新的项目<br>react-scripts是一个生成的项目所需要的开发依赖</p>
-<p>一般我们开始创建反应网应用程序的时候，要自己通过npm或者纱安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码<br>现在如果你正在搭建反应运行环境，使用create-react-app去自动构建你的程序。你的项目所在的文件夹下是没有配置文件.react-scripts是唯一的额外的构造依赖在你的package.json中，你的运行环境将有每一个你需要用来构建一个现代应用程序应用程序你需要依赖，在配置文件中编写的配置代码，反应脚本都帮你写了，比如：react-scripts帮你自动下载需要的webpack-dev-server依赖，然后反应脚本自己写了一个nodejs服务端的脚本代码start.js来实例化WebpackDevServer，并且运行启动了一个使用express的Http服务器，现在你只需要专心写SRC源代码就可以了。省去了很多精力，最适合快速上手一个演示了。</p>
-<p>[React-scripts有以下支持，都帮你配置好了：<br>React，JSX，ES6和Flow语法支持。<br>ES6之外的语言扩展像对象扩展运算符。<br>直接从JavaScript导入CSS和图像文件。<br>自动翻页CSS，所以你不需要-webkit或其他前缀。<br>一个构建脚本来捆绑JS，CSS，和图像进行生产，具有源代码图。<br>一个发现常见错误的开发服务器。</p>
-<p>全局安装 create-react-app<br>npm install  create-react-app  -g</p>
-<p>生成react项目<br>create-react-app + &lt;目录名字&gt;</p>
-<p>cd +&lt;目录&gt;</p>
-<p>npm start 启动react项目</p>
-<p>学习react之前的一些前置的概念<br>一个核心思想——组件化<br>两位带头大哥——react &amp; react-dom<br>一个基本运作方式——数据驱动视图<br>一位神秘卧底——jsx语法<br>三位护法——state（状态）、props（属性）、refs（实例）<br>一群打杂小弟——生命周期</p>
-<p>ReactDOM.render() 有两个参数,  第一个参数必须是闭合标签,表示渲染的元素 第二个参数是渲染的位置</p>
-<p>jsx  不是网页上的标签,它是一个语法糖,也被称为虚拟dom<br>{} 插值很随意</p>
-<p>组件化概念<br>react与es6和babel有很大的关联 所谓组件 就是模块,也就是对象,每个组件都有它自己的状态(state)</p>
-<p>要想修改state 必须通过setState<br>构造函数是唯一能够初始化 this.state 的地方。</p>
-<p>使用组件化注意事项:建立文件的时候首字母要大写</p>
-<p>使用es module 导出模块 导入模块<br>export default class App extends React.Component{<br>    constructor(){<br>        super()<br>    }<br>}</p>
-<p>导入模块  后缀名 ./App.js 中.js可不写<br>import App from ‘./App’</p>
-<p>导入css文件 后缀名.css要写<br>import ‘./index.css’</p>
-<p>导入svg<br>import svg from ‘./logo.svg’</p>
-<p>注意:<br>事件的绑定,在react中必须保证this的指向永远的指向当前的组件对象</p>
-<p>所有在constructor()方法中先将事件绑定</p>
-<p>this.timeHandler = this.timeHandler.bind(this)</p>
-<p>永远记得:在react中只要有事件绑定 上面这种写法是固定写法</p>
-<p>父子级关系<br>    <code>&lt;App /&gt;</code><br>        <code>&lt;Sub /&gt;</code><br>           <code>&lt;Msg /&gt;</code><br>        <code>&lt;Sub2 /&gt;</code></p>
-<p>通过上述markdown的语法可以看出 App组件是Sub和Sub2的父级,Sub是Msg的父级 Sub和Sub2是同级</p>
-<p>父级往子级去传值 使用props</p>
-<p>表单事件 点击事件 等等 所有的事件 都会为事件传进去一个proxy 代理对象</p>
-<p><code>&lt;CommentBox /&gt;</code><br>        <code>&lt;CommentList /&gt;</code><br>                    <code>&lt;CommentItem /&gt;</code><br>        <code>&lt;CommentForm /&gt;</code></p>
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
 
-      
-    </div>
-    <footer class="article-footer">
-      
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+
       
       
     </footer>
   </div>
   
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-我的一个大型项目"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
     
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/18/我的一个大型项目/">我的一个大型项目</a>
-    </h1>
   
+    <a href="/2017/07/23/前端开发工程师的职业规划/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">前端开发工程师的职业规划</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/18/我的一个大型项目/" class="article-date">
-	  <time datetime="2017-07-18T02:18:02.000Z" itemprop="datePublished">2017-07-18</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>百度新闻界面<br><a href="https://github.com/hegang0406/01first" target="_blank" rel="external">https://github.com/hegang0406/01first</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-    </footer>
-  </div>
   
 </article>
 
 <!-- Table of Contents -->
 
-  
-    <article id="post-React笔记(1)"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
+  <aside id="toc-sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Inhalt</strong>
     
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#行内元素和块元素的特征"><span class="nav-number">1.</span> <span class="nav-text">行内元素和块元素的特征?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#background可以简写哪些值"><span class="nav-number">2.</span> <span class="nav-text">background可以简写哪些值?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的选择器和优先级"><span class="nav-number">3.</span> <span class="nav-text">常见的选择器和优先级?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浮动有哪些特性"><span class="nav-number">4.</span> <span class="nav-text">浮动有哪些特性?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#清除浮动的方法"><span class="nav-number">5.</span> <span class="nav-text">清除浮动的方法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#margin-padding哪个允许负值"><span class="nav-number">6.</span> <span class="nav-text">margin,padding哪个允许负值?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#内联元素的padding和margin有什么特征"><span class="nav-number">7.</span> <span class="nav-text">内联元素的padding和margin有什么特征?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标签的嵌套规则"><span class="nav-number">8.</span> <span class="nav-text">标签的嵌套规则?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css样式优先级"><span class="nav-number">9.</span> <span class="nav-text">css样式优先级?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是语义化-语义化的必要性"><span class="nav-number">10.</span> <span class="nav-text">什么是语义化,语义化的必要性?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOCTYPE的作用是什么"><span class="nav-number">11.</span> <span class="nav-text">DOCTYPE的作用是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#margin-0-auto的使用条件是什么"><span class="nav-number">12.</span> <span class="nav-text">margin:0 auto的使用条件是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html5页面中不可缺少的标签结构有哪些"><span class="nav-number">13.</span> <span class="nav-text">html5页面中不可缺少的标签结构有哪些?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#定位的特性"><span class="nav-number">14.</span> <span class="nav-text">定位的特性?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get和post的区别"><span class="nav-number">15.</span> <span class="nav-text">get和post的区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#的type类型有哪些"><span class="nav-number">16.</span> <span class="nav-text">的type类型有哪些?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何将文字绑定在对应的表单元素上"><span class="nav-number">17.</span> <span class="nav-text">如何将文字绑定在对应的表单元素上?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表单常见的属性和作用"><span class="nav-number">18.</span> <span class="nav-text">表单常见的属性和作用?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#border-radius都支持哪些单位-如何表示一个角"><span class="nav-number">19.</span> <span class="nav-text">border-radius都支持哪些单位,如何表示一个角?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#box-shadow属性的参数都代表什么"><span class="nav-number">20.</span> <span class="nav-text">box-shadow属性的参数都代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标签的title和alt代表什么"><span class="nav-number">21.</span> <span class="nav-text">标签的title和alt代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#表格的填充和间距指的是什么"><span class="nav-number">22.</span> <span class="nav-text">表格的填充和间距指的是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单元格内容的水平和垂直位置调整如何设置"><span class="nav-number">23.</span> <span class="nav-text">单元格内容的水平和垂直位置调整如何设置?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何合并单元格的行和列"><span class="nav-number">24.</span> <span class="nav-text">如何合并单元格的行和列?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#table的常用属性"><span class="nav-number">25.</span> <span class="nav-text">table的常用属性?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解释rules和frame的含义"><span class="nav-number">26.</span> <span class="nav-text">解释rules和frame的含义?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#和的默认选定如何设置"><span class="nav-number">27.</span> <span class="nav-text">和的默认选定如何设置?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#margin塌陷-折叠-margin拖拽"><span class="nav-number">28.</span> <span class="nav-text">margin塌陷(折叠),margin拖拽?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何解决图片下方出现几像素的空白间隙"><span class="nav-number">29.</span> <span class="nav-text">如何解决图片下方出现几像素的空白间隙?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#前端页面有哪三层构成-分别是什么-作用是什么"><span class="nav-number">30.</span> <span class="nav-text">前端页面有哪三层构成,分别是什么?作用是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#严格模式与混杂模式如何区分-如何触发"><span class="nav-number">31.</span> <span class="nav-text">严格模式与混杂模式如何区分?如何触发?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#雪碧图的优缺点"><span class="nav-number">32.</span> <span class="nav-text">雪碧图的优缺点?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#link和-import引入css的区别"><span class="nav-number">33.</span> <span class="nav-text">link和@import引入css的区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS的盒子模型-IE中有什么不同"><span class="nav-number">34.</span> <span class="nav-text">CSS的盒子模型,IE中有什么不同?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见浏览器及其内核"><span class="nav-number">35.</span> <span class="nav-text">常见浏览器及其内核?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#css-reset的作用"><span class="nav-number">36.</span> <span class="nav-text">css reset的作用?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#XHTML是什么-内容"><span class="nav-number">37.</span> <span class="nav-text">XHTML是什么?内容?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#display-none-visibility-hidden-opacity-0区别"><span class="nav-number">38.</span> <span class="nav-text">display:none;visibility:hidden;opacity:0区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#强制类型转换和隐式类型转换"><span class="nav-number">39.</span> <span class="nav-text">强制类型转换和隐式类型转换?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JavaScript数据类型"><span class="nav-number">40.</span> <span class="nav-text">JavaScript数据类型?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何让网页从新窗口打开-还有哪些值"><span class="nav-number">41.</span> <span class="nav-text">如何让网页从新窗口打开?还有哪些值?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字符串操作"><span class="nav-number">42.</span> <span class="nav-text">字符串操作?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#数组操作"><span class="nav-number">43.</span> <span class="nav-text">数组操作?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何设置文字超出显示为省略号"><span class="nav-number">44.</span> <span class="nav-text">如何设置文字超出显示为省略号?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#new-Date-都有哪些方法-如何使用"><span class="nav-number">45.</span> <span class="nav-text">new Date()都有哪些方法,如何使用?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何创建-插入-添加-替换-删除-查找元素"><span class="nav-number">46.</span> <span class="nav-text">如何创建,插入,添加,替换,删除,查找元素?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#获取元素信息-到定位父级的距离-可视区宽高-滚动距离"><span class="nav-number">47.</span> <span class="nav-text">获取元素信息,到定位父级的距离,可视区宽高,滚动距离?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DOM获取兄弟节点-获取非行间样式"><span class="nav-number">48.</span> <span class="nav-text">DOM获取兄弟节点,获取非行间样式?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#闭包-作用域链-预解析"><span class="nav-number">49.</span> <span class="nav-text">闭包,作用域链,预解析?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何对网站的文件和资源进行优化"><span class="nav-number">50.</span> <span class="nav-text">如何对网站的文件和资源进行优化?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何提高性能"><span class="nav-number">51.</span> <span class="nav-text">如何提高性能?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#json是什么-与数组有什么区别-arguments又与数组有什么区别"><span class="nav-number">52.</span> <span class="nav-text">json是什么?与数组有什么区别?arguments又与数组有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是事件流-如何阻止"><span class="nav-number">53.</span> <span class="nav-text">什么是事件流,如何阻止?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件委托的写法"><span class="nav-number">54.</span> <span class="nav-text">事件委托的写法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件绑定和事件解除"><span class="nav-number">55.</span> <span class="nav-text">事件绑定和事件解除?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#null-undefined-’’-NaN的区别"><span class="nav-number">56.</span> <span class="nav-text">null,undefined,’’,NaN的区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#typeof操作符-和-instanceof-区别"><span class="nav-number">57.</span> <span class="nav-text">typeof操作符 和 instanceof 区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#变量的命名规则"><span class="nav-number">58.</span> <span class="nav-text">变量的命名规则?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何提高页面的加载速度"><span class="nav-number">59.</span> <span class="nav-text">如何提高页面的加载速度?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#form中input的值设置为readonly和disabled时有什么区别"><span class="nav-number">60.</span> <span class="nav-text">form中input的值设置为readonly和disabled时有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#逻辑运算符的优先级"><span class="nav-number">61.</span> <span class="nav-text">逻辑运算符的优先级?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的Math方法"><span class="nav-number">62.</span> <span class="nav-text">常见的Math方法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是JavaScript原型-原型链"><span class="nav-number">63.</span> <span class="nav-text">什么是JavaScript原型,原型链?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#document-load-document-ready-DOMContentLoaded"><span class="nav-number">64.</span> <span class="nav-text">document load,document ready,DOMContentLoaded?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jquery中插入节点的方法"><span class="nav-number">65.</span> <span class="nav-text">jquery中插入节点的方法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何给Jquery原型链上添加一个方法"><span class="nav-number">66.</span> <span class="nav-text">如何给Jquery原型链上添加一个方法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#http常见的状态码及其含义"><span class="nav-number">67.</span> <span class="nav-text">http常见的状态码及其含义?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html5和html4有什么区别"><span class="nav-number">68.</span> <span class="nav-text">html5和html4有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#从前端角度做好SEO需要考虑什么"><span class="nav-number">69.</span> <span class="nav-text">从前端角度做好SEO需要考虑什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同版本的JQuery-js和JQuery-min-js有什么区别"><span class="nav-number">70.</span> <span class="nav-text">同版本的JQuery.js和JQuery.min.js有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JQuery中-代表什么"><span class="nav-number">71.</span> <span class="nav-text">JQuery中$代表什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#vedio的属性有哪些"><span class="nav-number">72.</span> <span class="nav-text">vedio的属性有哪些?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#自定义标签是怎么回事-有什么好处"><span class="nav-number">73.</span> <span class="nav-text">自定义标签是怎么回事,有什么好处?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标签的作用是什么"><span class="nav-number">74.</span> <span class="nav-text">标签的作用是什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#save-和restore-方法"><span class="nav-number">75.</span> <span class="nav-text">save()和restore()方法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#对web标准以及W3C的理解和认识"><span class="nav-number">76.</span> <span class="nav-text">对web标准以及W3C的理解和认识?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#call-和apply"><span class="nav-number">77.</span> <span class="nav-text">call()和apply()?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是同源，jsonp的原理"><span class="nav-number">78.</span> <span class="nav-text">什么是同源，jsonp的原理?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是HTTP协议"><span class="nav-number">79.</span> <span class="nav-text">什么是HTTP协议?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是AJAX"><span class="nav-number">80.</span> <span class="nav-text">什么是AJAX?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#同步异步"><span class="nav-number">81.</span> <span class="nav-text">同步异步?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是Node-js"><span class="nav-number">82.</span> <span class="nav-text">什么是Node.js?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是es6"><span class="nav-number">83.</span> <span class="nav-text">什么是es6?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器默认字体-最小字体"><span class="nav-number">84.</span> <span class="nav-text">浏览器默认字体,最小字体?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#font值缩写"><span class="nav-number">85.</span> <span class="nav-text">font值缩写?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#readyState状态码"><span class="nav-number">86.</span> <span class="nav-text">readyState状态码?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一次完整的请求过程"><span class="nav-number">87.</span> <span class="nav-text">一次完整的请求过程?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#私有属性-共有属性-自定义属性"><span class="nav-number">88.</span> <span class="nav-text">私有属性,共有属性,自定义属性?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#属性的继承"><span class="nav-number">89.</span> <span class="nav-text">属性的继承?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html-css-js大小写"><span class="nav-number">90.</span> <span class="nav-text">html,css,js大小写?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#层级"><span class="nav-number">91.</span> <span class="nav-text">层级?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是流程控制语句"><span class="nav-number">92.</span> <span class="nav-text">什么是流程控制语句?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#函数的写法"><span class="nav-number">93.</span> <span class="nav-text">函数的写法?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#原生ajax写法"><span class="nav-number">94.</span> <span class="nav-text">原生ajax写法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简述一下对MVC架构模式的理解？"><span class="nav-number">95.</span> <span class="nav-text">简述一下对MVC架构模式的理解？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#CommonJS，AMD和CMD"><span class="nav-number">96.</span> <span class="nav-text">CommonJS，AMD和CMD?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是css-hack"><span class="nav-number">97.</span> <span class="nav-text">什么是css hack?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#caller-和-callee"><span class="nav-number">98.</span> <span class="nav-text">caller 和 callee?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#重排-重绘-重写-重载"><span class="nav-number">99.</span> <span class="nav-text">重排,重绘,重写,重载?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#封装，继承，多态"><span class="nav-number">100.</span> <span class="nav-text">封装，继承，多态?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多行文本指定行数省略号"><span class="nav-number">101.</span> <span class="nav-text">多行文本指定行数省略号</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#两边固定宽-中间自适应"><span class="nav-number">102.</span> <span class="nav-text">两边固定宽,中间自适应</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是虚拟DOM"><span class="nav-number">103.</span> <span class="nav-text">什么是虚拟DOM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的加密方式"><span class="nav-number">104.</span> <span class="nav-text">常见的加密方式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#flex"><span class="nav-number">105.</span> <span class="nav-text">flex</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#MVVM"><span class="nav-number">106.</span> <span class="nav-text">MVVM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#new-操作符做了什么"><span class="nav-number">107.</span> <span class="nav-text">new 操作符做了什么?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Object-is-有什么区别"><span class="nav-number">108.</span> <span class="nav-text">Object.is() , == , === 有什么区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正则表达式"><span class="nav-number">109.</span> <span class="nav-text">正则表达式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于页面的延迟加载"><span class="nav-number">110.</span> <span class="nav-text">关于页面的延迟加载?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于-for-in-for-for-of-循环"><span class="nav-number">111.</span> <span class="nav-text">关于 for in , for , for of 循环</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#响应式布局-media"><span class="nav-number">112.</span> <span class="nav-text">响应式布局 @media</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#W3C标准"><span class="nav-number">113.</span> <span class="nav-text">W3C标准</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#常见的图片格式"><span class="nav-number">114.</span> <span class="nav-text">常见的图片格式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#opacity-和-rgba-设置透明度的效果有什么区别"><span class="nav-number">115.</span> <span class="nav-text">opacity 和 rgba 设置透明度的效果有什么区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#querySelectorAll-与-getElementsByTagName-的区别"><span class="nav-number">116.</span> <span class="nav-text">querySelectorAll() 与 getElementsByTagName() 的区别?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#单例模式-工厂模式"><span class="nav-number">117.</span> <span class="nav-text">单例模式 工厂模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#几个命令"><span class="nav-number">118.</span> <span class="nav-text">几个命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#本地对象-内置对象-宿主对象-自定义对象"><span class="nav-number">119.</span> <span class="nav-text">本地对象,内置对象,宿主对象,自定义对象</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#浏览器-区别"><span class="nav-number">120.</span> <span class="nav-text">浏览器 区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何判断一个变量是数组类型"><span class="nav-number">121.</span> <span class="nav-text">如何判断一个变量是数组类型?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#关于不同类型对象进行算数计算"><span class="nav-number">122.</span> <span class="nav-text">关于不同类型对象进行算数计算</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#html5-的新特性"><span class="nav-number">123.</span> <span class="nav-text">html5 的新特性</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端的0-5像素"><span class="nav-number">124.</span> <span class="nav-text">移动端的0.5像素</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一个页面从输入-URL-到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）"><span class="nav-number">125.</span> <span class="nav-text">一个页面从输入 URL 到页面加载显示完成，这个过程中都发生了什么？（流程说的越详细越好）</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#eval-是做什么的？"><span class="nav-number">126.</span> <span class="nav-text">eval 是做什么的？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#如何copy一个dom元素？"><span class="nav-number">127.</span> <span class="nav-text">如何copy一个dom元素？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ajax请求方式有几种（8种）？"><span class="nav-number">128.</span> <span class="nav-text">ajax请求方式有几种（8种）？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#解决移动端-click-事件-300ms-延迟"><span class="nav-number">129.</span> <span class="nav-text">解决移动端 click 事件 300ms 延迟</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#移动端适配"><span class="nav-number">130.</span> <span class="nav-text">移动端适配</span></a></li></ol>
     
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/18/React笔记(1)/">React笔记(1)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/18/React笔记(1)/" class="article-date">
-	  <time datetime="2017-07-18T02:04:06.000Z" itemprop="datePublished">2017-07-18</time>
-	</a>
-
-      
-      
     </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>create-React-app是一个全局的命令行工具用来创建一个新的项目<br>react-scripts是一个生成的项目所需要的开发依赖</p>
-<p>一般我们开始创建反应网应用程序的时候，要自己通过npm或者纱安装项目的全部依赖，再写webpack.config.js，一系列复杂的配置，搭建好开发环境后写src源代码<br>现在如果你正在搭建反应运行环境，使用create-react-app去自动构建你的程序。你的项目所在的文件夹下是没有配置文件.react-scripts是唯一的额外的构造依赖在你的package.json中，你的运行环境将有每一个你需要用来构建一个现代应用程序应用程序你需要依赖，在配置文件中编写的配置代码，反应脚本都帮你写了，比如：react-scripts帮你自动下载需要的webpack-dev-server依赖，然后反应脚本自己写了一个nodejs服务端的脚本代码start.js来实例化WebpackDevServer，并且运行启动了一个使用express的Http服务器，现在你只需要专心写SRC源代码就可以了。省去了很多精力，最适合快速上手一个演示了。</p>
-<p>[React-scripts有以下支持，都帮你配置好了：<br>React，JSX，ES6和Flow语法支持。<br>ES6之外的语言扩展像对象扩展运算符。<br>直接从JavaScript导入CSS和图像文件。<br>自动翻页CSS，所以你不需要-webkit或其他前缀。<br>一个构建脚本来捆绑JS，CSS，和图像进行生产，具有源代码图。<br>一个发现常见错误的开发服务器。</p>
-<p>全局安装 create-react-app<br>npm install  create-react-app  -g</p>
-<p>生成react项目<br>create-react-app + &lt;目录名字&gt;</p>
-<p>cd +&lt;目录&gt;</p>
-<p>npm start 启动react项目</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/07/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/07/13/hello-world/" class="article-date">
-	  <time datetime="2017-07-13T03:07:31.960Z" itemprop="datePublished">2017-07-13</time>
-	</a>
-
-      
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-
-
+  </aside>
 </section>
         
       </div>
-      
-        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
       
       <footer id="footer">
   
@@ -1593,9 +1086,9 @@ gulp.watch(&quot;./*.html&quot;).on(&apos;change&apos;, reload);
 <script src="/js/scripts.js"></script>
 
 
-  <script src="/js/home.js"></script>
 
 
+  <script src="/js/dialog.js"></script>
 
 
 
@@ -1680,6 +1173,8 @@ gulp.watch(&quot;./*.html&quot;).on(&apos;change&apos;, reload);
   
   <a id="rocket" href="#top" class=""></a>
   <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+    <a id="menu-switch"><i class="fa fa-bars fa-lg"></i></a>
   
 </body>
 </html>
